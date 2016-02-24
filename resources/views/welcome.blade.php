@@ -2,9 +2,9 @@
 
 
 @section('content')
-<?php
-    //Displays the img & h2 for $cats, as $cats is defined in DatabaseController
-?>
+
+<!--    Displays the img & h2 for $cats, as $cats is defined in DatabaseController-->
+
     @foreach($cats as $cat)
 
 

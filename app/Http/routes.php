@@ -14,9 +14,8 @@ Route::get('/', 'DatabaseController@welcome');
 //Routes to DatabaseController, public function Items
 Route::get('/{id}', 'DatabaseController@Items');
 Route::get('catsubcats/{id}', 'DatabaseController@catsubcats');
-Route::get('delete/{id}', 'DatabaseController@Delete');
-
-Route::get('deleteItem/{id}', 'DatabaseController@DeleteItems');
+//Route::delete('cat'/'delete',array('menu'=>'DatabaseController@DeleteCat');
+Route::delete('item/{id}', 'DatabaseController@destroy');
 /*
 |--------------------------------------------------------------------------
 | Application Routes

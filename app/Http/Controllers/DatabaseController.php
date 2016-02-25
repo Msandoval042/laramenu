@@ -20,17 +20,13 @@ class DatabaseController extends Controller
         $catsubcats=DB::table('catsubcats')->where('cat_id', $id)->get();
         return view('catsubcats', compact('catsubcats'));
     }
+    public function delete($id){
+        DB::table ('menu')->where('cat_id', $id)->delete();
+        return view('Deleted', compact('cats'));
+    }
     
    
     
-     public function Delete($id){
-            DB::table('catsubcats')->where('id', $id)->delete();
-            return view('pages.delete');
-    }
-    public function DeleteItems($id){
-            DB::table('items')->where('id', $id)->delete();
-            return view('pages.delete');
-    }
 
 }
 
